@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:insert="base :: head"></head>
+<head th:replace="base :: head"></head>
 <body>
-<nav th:insert="base :: navbar"></nav>
+<nav th:replace="base :: navbar"></nav>
 
 <!--Message Cards Start-->
 <div class="card" th:each="message : ${messages}">
@@ -32,6 +32,6 @@
 </div>
 <!--Message Cards end-->
 
-<div th:insert="base :: javascript"></div>
+<div th:replace="base :: javascript"></div>
 </body>
 </html>

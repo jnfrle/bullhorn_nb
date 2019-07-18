@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:insert="base :: head">
+<head th:replace="base :: head">
 
 </head>
 <body style="background-color: aqua">
-<nav th:insert="base :: navbar"></nav>
+<nav th:replace="base :: navbar"></nav>
 
     <a style="margin: 10px;" href="/"><img width="45px" src="https://res.cloudinary.com/dmfaehjot/image/upload/v1563463725/Week5Challenge/9895_f6r8qm.svg" alt="go back image"/></a><br/>
 
@@ -28,6 +28,6 @@
     <!--Message Cards Ends-->
 
 
-<div th:insert="base :: javascript"></div>
+<div th:replace="base :: javascript"></div>
 </body>
 </html>

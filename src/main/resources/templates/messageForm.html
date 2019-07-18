@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:insert="base :: head"></head>
+<head th:replace="base :: head"></head>
 
 <body style="background-color: aqua;">
-<nav th:insert="base :: navbar"></nav>
+<nav th:replace="base :: navbar"></nav>
 
 <!--Form start-->
-<form style="margin: 20px; background-color: aliceblue; border-radius: 20px 20px 20px 20px; -moz-border-radius: 20px 20px 20px 20px; -webkit-border-radius: 20px 20px 20px 20px; border: 0px solid #000000;" action="#" th:action="@{/process}" th:object="${message}" method="post">
+<form style="margin: 20px; background-color: aliceblue; border-radius: 20px 20px 20px 20px; -moz-border-radius: 20px 20px 20px 20px; -webkit-border-radius: 20px 20px 20px 20px; border: 0px solid #000000;" action="#" th:action="@{/process}" th:object="${bullhorn}" method="post">
     <input type="hidden" th:field="*{id}" />
     <div style="margin: 10px;" class="form-group">
         <label style="margin-top: 10px;" for="exampleFormControlInput1">Title</label>
@@ -37,6 +37,6 @@
 </form>
 <!--Form End-->
 
-<div th:insert="base :: javascript"></div>
+<div th:replace="base :: javascript"></div>
 </body>
 </html>
